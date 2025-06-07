@@ -1,0 +1,216 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyWoWers - Premium WoW Boosting Service</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f5f0ff',
+                            100: '#ebe0ff',
+                            200: '#d6c1ff',
+                            300: '#c2a2ff',
+                            400: '#ad83ff',
+                            500: '#8A2BE2',
+                            600: '#7a25d1',
+                            700: '#6a20c0',
+                            800: '#5a1baf',
+                            900: '#4a169e',
+                        },
+                        secondary: {
+                            50: '#fff0f9',
+                            100: '#ffe0f3',
+                            200: '#ffc1e7',
+                            300: '#ffa2db',
+                            400: '#ff83cf',
+                            500: '#FF69B4',
+                            600: '#e65fa2',
+                            700: '#cc5590',
+                            800: '#b34b7e',
+                            900: '#99416c',
+                        },
+                        accent: {
+                            500: '#00FFFF',
+                            600: '#00e6e6',
+                        },
+                        dark: {
+                            100: '#1a1a2e',
+                            200: '#16213e',
+                            300: '#0f1a2e',
+                            400: '#0d1426',
+                            500: '#0a0e1a',
+                        },
+                        light: {
+                            100: '#f8f9fa',
+                            200: '#e9ecef',
+                            300: '#dee2e6',
+                        },
+                    },
+                    boxShadow: {
+                        'glow-purple': '0 0 15px rgba(138, 43, 226, 0.5)',
+                        'glow-pink': '0 0 15px rgba(255, 105, 180, 0.5)',
+                        'glow-cyan': '0 0 15px rgba(0, 255, 255, 0.5)',
+                    },
+                    fontFamily: {
+                        sans: ['"Poppins"', 'sans-serif'],
+                        display: ['"Rajdhani"', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font imports same as before -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0e1a;
+            color: #e9ecef;
+        }
+
+        .hero-section {
+            background-image: linear-gradient(to right, rgba(10, 14, 26, 0.95) 40%, rgba(26, 26, 46, 0.8) 100%),
+            url('{% static "images/hero-bg.jpg" %}');
+            background-size: cover;
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            background-color: rgba(26, 26, 46, 0.7);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px -5px rgba(138, 43, 226, 0.3);
+            border-color: rgba(138, 43, 226, 0.5);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Smooth modal transitions */
+        [id$="Modal"] {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-dark-950">
+    {% include 'myapp/navbar.html' %}
+
+    <section id="home" class="hero-section py-24 text-white "
+        style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.3) 100%), url('https://static.readdy.ai/image/b396f9b12feb38dbc7ee97b07f22e1aa/e823d53ea5f1627e1b7a28d43f048475.png'); background-size: cover; background-position: center right;">
+        <div class=" container mx-auto px-6 ">
+
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="w-full lg:w-1/2 space-y-6">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        Speed & Safety Oriented WoW Boosting Service
+                    </h1>
+                    <p class="text-xl md:text-2xl opacity-90">
+                        Trusted by Thousands of World of Warcraft Players for unmatched quality and affordable
+                        rates.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                        <a href="https://discord.gg/PE7GyQvnZv">
+                            <button
+                                class="bg-primary-900 hover:bg-opacity-90 px-8 py-3 text-lg font-semibold !rounded-button whitespace-nowrap flex items-center justify-center">
+                                <span>Join Discord</span>
+                                <div class="w-5 h-5 flex items-center justify-center ml-2">
+                                    <i class="ri-discord-fill ri-lg"></i>
+                                </div>
+                            </button>
+                        </a>
+                        <a href="#services">
+                            <button
+                                class="border-2 border-white hover:border-primary hover:text-primary transition-colors px-8 py-3 text-lg font-semibold !rounded-button whitespace-nowrap">
+                                View Services
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden lg:block lg:w-1/2 pl-8">
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    {% include 'myapp/services.html' %}
+    {% include 'myapp/trust_indicators.html' %}
+    {% include 'myapp/faq.html' %}
+    {% include 'myapp/footer.html' %}
+    <!-- Modal Backdrop -->
+    <div id="modalBackdrop" class="fixed inset-0 bg-black bg-opacity-80 z-40 hidden"></div>
+
+    <!-- Scripts same as before -->
+    <script>
+        // Improved modal functions
+        function openModal(modalId) {
+            document.getElementById('modalBackdrop').classList.remove('hidden');
+            document.getElementById(modalId).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById('modalBackdrop').classList.add('hidden');
+            document.getElementById(modalId).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking on backdrop
+        document.getElementById('modalBackdrop').addEventListener('click', function () {
+            document.querySelectorAll('[id$="Modal"]').forEach(modal => {
+                if (!modal.classList.contains('hidden')) {
+                    closeModal(modal.id);
+                }
+            });
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                document.querySelectorAll('[id$="Modal"]').forEach(modal => {
+                    if (!modal.classList.contains('hidden')) {
+                        closeModal(modal.id);
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

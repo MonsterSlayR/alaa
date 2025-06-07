@@ -1,0 +1,85 @@
+/* Flipbook container */
+.flipbook-viewport {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #121826; /* Main dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Flipbook styling */
+.flipbook {
+  background: #121826; /* Dark cover background */
+  box-shadow: 0 0 20px rgba(215, 190, 104, 0.3); /* Gold-tinted shadow */
+  transform-style: preserve-3d;
+  width: 1000px;
+  height: 600px;
+}
+
+/* Page styling */
+.flipbook .page {
+  background: #121826; /* Dark page background */
+  color: #d7be68; /* Gold text color */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #d7be68; /* Gold border */
+}
+
+/* Hard cover styling */
+.flipbook .hard {
+  background: #121826 !important; /* Dark cover */
+  color: #d7be68 !important; /* Gold text */
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(215, 190, 104, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.flipbook .hard small {
+  color: #d7be68; /* Gold secondary text */
+  font-style: italic;
+  font-weight: lighter;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+/* Image styling */
+.page img {
+  width: 70%;
+  object-fit: cover;
+  margin: auto;
+  border: 2px solid #d7be68; /* Gold border around images */
+  box-shadow: 0 0 15px rgba(215, 190, 104, 0.2);
+}
+
+.flipbook .page small {
+  color: #d7be68; /* Gold text */
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Page content headings */
+.flipbook .page h2,
+.flipbook .page h3 {
+  color: #d7be68; /* Gold headings */
+  text-shadow: 0 0 8px rgba(215, 190, 104, 0.3);
+}
+
+/* Add gold accents to turn.js controls */
+.turn-page {
+  background-color: #121826 !important;
+}
+
+.turn-page-shadow {
+  background: rgba(215, 190, 104, 0.1) !important;
+}
