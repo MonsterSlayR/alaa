@@ -29,3 +29,6 @@ builder = "paketobuildpacks/builder:base"
 [[statics]]
   guest_path = '/code/static'
   url_prefix = '/static/'
+
+  [[services]]
+  internal_port = 8000  # Must match Django's port
